@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title> Peddy ।। Home</title>
+    <link rel="icon" href="images/logo.webp" >
+</head>
+
+<body class=" max-w-[1600px] mx-auto ">
+    <div class="max-w-7xl mx-auto">
+
+        <!-- Navbar section start -->
+        <div class="navbar bg-base-100 pt-6">
+            <div class="navbar-start">
+                <div class="flex gap-3">
+                    <img src="images/logo.webp" alt="">
+                    <p class="font-bold text-2xl">Peddy</p>
+                </div>
+            </div>
+            <div class="navbar-center hidden md:block lg:">
+                <button class="btn bg-transparent shadow-transparent mr-4  border-none">Home</button>
+                <button class="btn bg-transparent shadow-transparent mr-4  border-none">Shop</button>
+                <button class="btn bg-transparent shadow-transparent mr-4  border-none">Contact</button>
+            </div>
+            <div class="navbar-end">
+                <button class="btn btn-ghost btn-circle">
+                    <img src="images/Frame 4.png" alt="">
+                </button>
+                <div class="logo"></div>
+            </div>
+        </div>
+        <!-- Navbar section end -->
+
+        <!-- Banner starts -->
+        <div class="text-center pt-16">
+            <h4 class="inline text-gray-400 font-bold ">Bringing Families Together <img class="w-6 inline"
+                    src="https://img.icons8.com/?size=100&id=DFU1kReSUccu&format=png&color=000000" alt="">
+                <img class="w-6 inline" src="https://img.icons8.com/?size=100&id=8U9W747SicvQ&format=png&color=000000"
+                    alt="">
+            </h4>
+            <h1 class=" text-3xl md:text-7xl font-bold py-8"> Your Path to Adoption <br> Starts Here</h1>
+            <p class="w-1/2 mx-auto pb-8">It is a long established fact that a reader will be distracted by the readable
+                content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
+            <button class="btn bg-green-900 px-6 text-white rounded-lg font-medium"> <a href="#adopt-best"> View
+                    More</a>
+            </button>
+        </div>
+
+        <div class="w-7/12 mx-auto my-12">
+            <img src="images/pet.webp" alt="">
+        </div>
+        <!-- Banner end -->
+
+
+        <!-- Adopt Best friend start -->
+        <div class="text-center">
+            <h3 class="font-semibold text-4xl" id="adopt-best">Adopt Your Best Friend</h3>
+            <p class="w-2/3 mx-auto pt-8 text-gray-500">It is a long established fact that a reader will be distracted
+                by
+                the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has
+                a.
+            </p>
+
+        </div>
+        <div id="load_category_dogs" class=" py-12 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 ">
+
+            <!-- Dynamically btn created and shows here -->
+
+            
+
+        </div>
+        <!-- Adopt Best friend end -->
+        <!-- Best deal start -->
+        <div class="flex justify-between items-center pb-11">
+            <div>
+                <p class="font-bold text-xl">Best Deal For you</p>
+            </div>
+            <div><button class="btn bg-green-900 px-6 text-white rounded-lg font-medium"> Sort by Price</button></div>
+        </div>
+        <div class="flex gap-5 pb-14 ">
+
+            <div id="load_all_pet" class= " w-[70%] border-2 p-3 rounded-xl  grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-4  text-center m-0"  >
+                <!-- Display All pet -->
+    
+    
+            </div>
+
+            <div id="liked-pic" class="w-[30%] border-2 rounded-xl grid grid-cols-2 gap-2 p-3">
+                <!-- Dynamically loaded images will appear here -->
+            </div>
+            
+            
+        </div>
+        <!-- Best deal end -->
+
+    </div>
+    <!-- Footer start -->
+    <div class="bg-black py-28">
+        <div class="max-w-7xl mx-auto pl-5  md:pl-0 md:flex justify-between">
+            <div>
+                <div class="flex gap-3">
+                    <img src="images/logo.webp" alt="">
+                    <p class="font-bold text-2xl text-white">Peddy</p>
+                </div>
+                <p class="text-white py-7">Location: av. Washington 165, NY CA <br> 54003 <br>
+                    Phone: +31 85 964 47 25 <br>
+                    Email: info@yourdomain.com <br>
+                    Openings hours: 9.00 AM - 5.00 PM</p>
+                <img src="images/Frame 30.png" alt="">
+            </div>
+            <div class="text-white">
+                <h6 class="font-semibold text-xl pb-6">Useful Links</h6>
+                <p class="text-gray-400 py-2">Home</p>
+                <p class="text-gray-400 py-2">About Us</p>
+                <p class="text-gray-400 py-2">Animals</p>
+                <p class="text-gray-400 py-2">Foundation</p>
+                <p class="text-gray-400 py-2">Contact</p>
+            </div>
+            <div class="text-white">
+                <h6 class="font-semibold text-xl">Drop a Message</h6>
+                <label class="input input-bordered flex items-center gap-2 w-52 bg-gray-700 my-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"
+                        class="h-4 w-4 opacity-70">
+                        <path
+                            d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z" />
+                        <path
+                            d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" />
+                    </svg>
+                    <input type="text" class="grow" placeholder="Enter your email " />
+                </label>
+                <button class="btn bg-teal-600 w-52  text-white rounded-lg font-medium">Subscribe</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer end -->
+    <!-- Open the modal using ID.showModal() method -->
+    <button id="showModalData" class="btn " onclick="myModal.showModal()">open modal</button>
+    <dialog id="myModal" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+            <div id="modal-content">
+
+            </div>
+            <div class="modal-action">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn hover:bg-green-100 hover:border-green-700 w-full">Close</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+
+    <script src="script/adopt.js"></script>
+
+
+
+
+
+
+
+    
+</body>
+
+</html>
