@@ -76,7 +76,7 @@ const displayAllPet = (allPet) => {
         petDiv.innerHTML = `
        
         
-        <div class = "card-body border-2 rounded-lg  ">
+        <div class = "md:card-body pb-4 md:pb-4 md:border-2 rounded-lg  ">
   <figure>
     <img class = "w-full object-cover rounded-lg"
       src="${pets.image}"
@@ -89,7 +89,7 @@ const displayAllPet = (allPet) => {
     <div class = ' pb-1'> <img class = "inline pr-1" src="images/gender.png" alt=""> Sex: ${pets.gender}</div>
     <div class = ' pb-4'> <img class = "inline pr-1" src="images/price.png" alt=""> Price: ${pets.price}</div>
     <div class="card-actions border-t-2 pt-4"">
-      <button  class="btn bg-red-500 "><img class= 'w-4' src="https://img.icons8.com/?size=100&id=82788&format=png&color=000000" alt="">
+      <button onclick = "loadLikedPic('${pets.image}')" class="btn bg-red-500 "><img class= 'w-4' src="https://img.icons8.com/?size=100&id=82788&format=png&color=000000" alt="">
 </button>
       <button class="btn bg-transparent font-bold text-teal-600 ">Adopt</button>
       <button onclick="loadDetails('${pets.petId}')" class="btn bg-transparent font-bold text-teal-600 ">Details</button>
@@ -102,6 +102,16 @@ const displayAllPet = (allPet) => {
        allPetDiv.append(petDiv)
       
     })
+}
+const loadLikedPic = (id) =>{
+    console.log(id)
+    const likedPicContainer = document.getElementById('liked-pic')
+    const likedPic = document.createElement('div')
+    likedPic.innerHTML = `
+                <img src="${id}" alt="Liked Pic" class="w-full object-cover rounded-lg">
+
+`;
+    likedPicContainer.append(likedPic)
 }
 
 // w-full object-cover
