@@ -6,9 +6,14 @@ const loadCategory = () => {
     
 }
 const loadCategoryVideos =(id) =>{
+    console.log(id)
     fetch(`https://openapi.programming-hero.com/api/peddy/category/${id}`)
     .then(res => res.json())
-    .then (data => displayAllPet(data.data))
+    .then (data => {
+        const activeBtn = document.getElementById(`btn-${id}`)
+        console.log(activeBtn)
+        displayAllPet(data.data)
+    })
     .catch((error) => console.log(error))
 
 
@@ -19,22 +24,22 @@ const displayCategory = (petNames) => {
     const allPetCategory = document.getElementById("load_category_dogs")
 
     petNames.forEach((pet) => {
-        console.log(pet, "pet name")
+        // console.log(pet)
         const btnDiv = document.createElement('div')
         btnDiv.classList.add(
-            'py-12', 'gap-4',
+            'md:py-12', 'py-4' , 'gap-4',
         )
         btnDiv.innerHTML = `
-        <button onclick = "loadCategoryVideos('${pet.category}')"
+        <button id= "btn-${pet.category}"onclick = "loadCategoryVideos('${pet.category}')"
         
-                class="btn hover:bg-green-100 hover:border-green-700 px-20 pt-10 pb-14 bg-transparent rounded-lg font-medium">
+                class="btn hover:bg-green-100 hover:border-green-700 px-4 md:px-20 pt-10 pb-14 bg-transparent rounded-lg font-medium category-btn">
                 <img class="w-8" src="${pet.category_icon}" alt="">
                 <p class="font-bold text-xl">${pet.category}</p>
                 </button>
         `
         allPetCategory.appendChild(btnDiv)
     })
-
+  
 }
 
 const loadAllPet = () => {
@@ -51,7 +56,7 @@ const displayAllPet = (allPet) => {
     if(allPet.length == 0){
         allPetDiv.classList.remove('grid', 'p-3' )
         allPetDiv.innerHTML = `
-       <div class=" p-10 mx-auto flex flex-col gap-5 justify-center items-center bg-gray-100 ">
+       <div class=" p-14 mx-auto flex flex-col gap-5 justify-center items-center bg-gray-100 ">
                 <div>
                     <img src="images/no-data 1.png" alt="">
                 </div>
@@ -66,17 +71,17 @@ const displayAllPet = (allPet) => {
        return
     }
     else{
-        allPetDiv.classList.add('grid', 'p-3')
+        allPetDiv.classList.add('grid', 'md:p-3', 'p-2')
     }
    
     allPet.forEach((pets) => {
         // console.log(pets)
         const petDiv = document.createElement('div')
-        petDiv.classList ='card card-compact'
+        petDiv.classList ='card '
         petDiv.innerHTML = `
        
         
-        <div class = "md:card-body pb-4 md:pb-4 md:border-2 rounded-lg  ">
+        <div class = "card-body p-0 mb-4 md:p-2 md:border-2 rounded-lg  ">
   <figure>
     <img class = "w-full object-cover rounded-lg"
       src="${pets.image}"
@@ -89,7 +94,7 @@ const displayAllPet = (allPet) => {
     <div class = ' pb-1'> <img class = "inline pr-1" src="images/gender.png" alt=""> Sex: ${pets.gender}</div>
     <div class = ' pb-4'> <img class = "inline pr-1" src="images/price.png" alt=""> Price: ${pets.price}</div>
     <div class="card-actions border-t-2 pt-4"">
-      <button onclick = "loadLikedPic('${pets.image}')" class="btn bg-red-500 "><img class= 'w-4' src="https://img.icons8.com/?size=100&id=82788&format=png&color=000000" alt="">
+      <button onclick = "loadLikedPic('${pets.image}')" class="btn bg-transparent "><img class= 'w-4' src="https://img.icons8.com/?size=100&id=82788&format=png&color=000000" alt="">
 </button>
       <button class="btn bg-transparent font-bold text-teal-600 ">Adopt</button>
       <button onclick="loadDetails('${pets.petId}')" class="btn bg-transparent font-bold text-teal-600 ">Details</button>
